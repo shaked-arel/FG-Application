@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="app0.Joystick"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:app0"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Ellipse Fill="#FF6C6C78" HorizontalAlignment="Left" Height="150" Margin="105,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="150" StrokeThickness="2"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="200" Margin="40,24,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" StrokeThickness="2"/>
+        <Ellipse Fill="#FFADADC3" Height="75" Canvas.Left="37" Stroke="Black" StrokeThickness="0" Canvas.Top="0" Width="75" Margin="140,86,84,139"/>
+        <Canvas Margin="105,49,46,101">
+            <Ellipse Fill="#FF131316" HorizontalAlignment="Center" Height="50" Stroke="Black" VerticalAlignment="Center" Width="50" Canvas.Right="{Binding  VM_Aileron}" Canvas.Top="{Binding VM_Elevator}"/>
+        </Canvas>
+        <Canvas Margin="40,27,230,248">
+            <Rectangle x:Name="throttle" Fill="#FF222121" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="30" Canvas.Top="{Binding VM_Throttle}"/>
+        </Canvas>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="30" Margin="79,239,0,0" Stroke="Black" VerticalAlignment="Top" Width="200" StrokeThickness="2"/>
+        <Canvas Margin="231,239,26,36">
+            <Rectangle x:Name="rudder" Fill="#FF222121" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="20" Canvas.Right="{Binding VM_Rudder}"/>
+        </Canvas>
+
+
+    </Grid>
+</UserControl>

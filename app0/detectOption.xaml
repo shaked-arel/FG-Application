@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="app0.detectOption"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:app0"
+             mc:Ignorable="d" d:DesignWidth="500" Height="170">
+    <Grid>
+        <Button x:Name="browse" FontFamily="Arial Rounded MT Bold" Click="GetFile_Click" Content="..." HorizontalAlignment="Left" Margin="454,23,0,0" VerticalAlignment="Top" Width="31"/>
+        <Label x:Name="detectLable" Content="uploud a anomaly file" FontFamily="Arial Rounded MT Bold" HorizontalAlignment="Left" Margin="263,20,0,0" VerticalAlignment="Top" Width="181" Background="White"/>
+        
+        <Button x:Name="implement" Content="get detection"  Click="start_Detect" FontFamily="Arial Rounded MT Bold" HorizontalAlignment="Left" Height="26" Margin="298,107,0,0" VerticalAlignment="Top" Width="133"/>
+        <ListBox
+            x:Name="ShowAnomalies"
+             Margin="20,18,260,29"
+            ItemsSource="{Binding VM_Anomalies}"
+            RenderTransformOrigin="0.5,0.5"
+            FontFamily="Arial Rounded MT Bold">
+            <ListBox.RenderTransform >
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="-0.236" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <Button x:Name="DllU" FontFamily="Arial Rounded MT Bold" Click="GetDll_Click" Content="..." HorizontalAlignment="Left" Height="22" Margin="454,64,0,0" VerticalAlignment="Top" Width="31"/>
+        <Label x:Name="dllLable" Content="uploud the dll"  Background="White" FontFamily="Arial Rounded MT Bold" HorizontalAlignment="Left" Height="25" Margin="263,62,0,0" VerticalAlignment="Top" Width="181"/>
+    </Grid>
+</UserControl>
