@@ -41,7 +41,6 @@ Before connecting, run the FlightGear Launcher and go to *Additional Settings* a
 --fdm=null
 
 Offered options to download the application: 
-- Use git on the termianl with the command: git clone https://github.com/Noamls123/FG-Application
 - Download the zip for this repository.
 
  After opening the app, a MainWindow will show up. 
